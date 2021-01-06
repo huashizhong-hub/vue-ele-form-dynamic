@@ -109,7 +109,7 @@
 // 本组件的重点在于单列和多列对数据的处理不一致
 // 单列基本类型数组, 多列是对象数组
 import validate from './validate'
-import ExtendSlot from 'vue-ele-form/lib/ExtendSlot'
+import ExtendSlot from 'vue-yd-form/lib/ExtendSlot'
 const equal = require('fast-deep-equal')
 
 export default {

@@ -1,28 +1,28 @@
 <template>
   <form-dynamic
-    :class="desc.class"
-    :style="desc.style"
+    :class="defDesc.class"
+    :style="defDesc.style"
     v-bind="attrs"
     ref="form-dynamic"
-    v-model="newValue"
+    v-model="dataModel"
     v-on="onEvents"
   />
 </template>
 
 <script>
 import FormDynamic from './FormDynamic'
-import formMixin from 'vue-ele-form/lib/mixins/formMixin'
+import formItemMixin from 'vue-yd-form/lib/mixins/formItemMixin'
 
 export default {
   name: 'EleFormDynamic',
-  mixins: [formMixin],
+  mixins: [formItemMixin],
   components: {
     FormDynamic
   },
   computed: {
     defaultAttrs() {
       return {
-        placeholder: this.t('ele-form.input') + this.desc.label
+        placeholder: this.t('ele-form.input') + this.defDesc.label
       }
     }
   },
